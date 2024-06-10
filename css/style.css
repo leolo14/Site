@@ -1,70 +1,94 @@
-/* Style général */
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* En-tête */
-header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #1e1e1e;
-}
-
-header a {
-    flex: 0 0 auto;
-    text-decoration: none;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
-header img:last-child {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-/* Menu de navigation */
-nav.menu-nav {
-    background-color: #00acc1;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav.menu-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav.menu-nav ul li {
+nav.menu-nav u1 li.btn {
     display: inline-block;
+    list-style-type: none;
+    padding-top: 15px;
+
 }
 
-nav.menu-nav ul li a {
+nav.menu-nav {
+    background-color: cadetblue;
+    text-align: center;
+    min-height: 7vh;
+}
+
+nav.menu-nav u1 li.btn a{
+   
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color:cadetblue;
+   
 }
 
-nav.menu-nav ul li:hover a {
-    color: #212121;
-    background-color: #007c91;
-}
 
-/* Contenu principal */
-div.leftbox, div.rightbox {
+    nav.menu-nav u1 li.btn:hover a {
+        color: darkgray;
+        background-color: darkslategrey;
+        transition: 0.3s all;
+    }
+footer {
+    background-color: black;
+    color: white;
     padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    footer p {
+        display: inline;
+        margin: 20px 10px 10px;
+    }
+
+.footer-image {
+    width: 10%;
+    height: auto;
+    display: block; 
+    margin-left: auto; 
+}
+
+
+
+div#content div.leftbox h1, p {
+    margin: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
+
+div#entreprise {
+    background-color: darkslategrey;
+}
+
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color:whitesmoke;
+    text-align: center;
+}
+.image-container {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    float: right;
+}
+
+.image {
+    width: 550px;
+    height: auto;
+    transition: transform 0.3s;
+    padding-r: 50px;
+}
+
+.image-container:hover .image {
+    transform: scale(1.1);
 }
 
 .leftbox {
@@ -72,135 +96,95 @@ div.leftbox, div.rightbox {
     width: 50%;
 }
 
-.rightbox {
-    float: right;
-    width: 50%;
-    text-align: center;
-}
 
-.rightbox img {
-    width: 80%;
-    height: auto;
-    margin: 10px 0;
-    transition: transform 0.3s;
-}
+header a {
+    text-decoration: none; 
 
-.rightbox img:hover {
-    transform: scale(1.1);
-}
-
-/* Sections de l'entreprise */
-div#entreprise {
-    background-color: #37474f;
-    padding: 20px;
-}
-
-div#entreprise .dev {
-    background-color: #00acc1;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-div#entreprise .dev:hover {
-    background-color: #007c91;
-}
-
-div#entreprise .dev img {
-    border-radius: 50%;
-    margin-right: 10px;
-    width: 60px;
-    height: 60px;
-}
-
-div#entreprise .dev p {
-    margin: 0;
-    color: #fff;
-}
-
-div#entreprise .dev-details {
-    display: none;
-    padding: 10px;
-    background-color: #546e7a;
-    margin: 10px 0;
-    color: #fff;
-}
-
-div#entreprise .dev-details h1 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-/* Téléchargements */
-#telechargements {
-    background-color: #37474f;
-    padding: 20px;
-}
-
-#telechargements .leftbox, #telechargements .rightbox {
-    color: #fff;
-}
-
-#telechargements .rightbox {
-    font-size: 18px;
-}
-
-#telechargements a.lien {
-    color: #ffeb3b;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#telechargements a.lien:hover {
-    color: #fbc02d;
-}
-
-/* Pied de page */
-footer {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-.footer-image {
-    width: 10%;
-    height: auto;
-}
-
-/* Animations et transitions */
-* {
-    transition: all 0.3s ease-in-out;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 
-/* Suppression des styles de liste par défaut */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
-li {
-    padding: 0;
-    margin: 0;
-}
 
-/* Flexbox pour un alignement centré */
-header, footer {
+
+div#entreprise div.dev {
+    background-color: cadetblue;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 15;
+    color: white;
+    font-size: 20px;
+
 }
+
+div.dev img {
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 18px;
+}
+
+div.dev p {
+    margin: 0;
+}
+
+div#entreprise div.dev:hover {
+   
+    background-color: darkslategrey;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+
+
+h2 {
+
+    font-size: 34px;
+    color: white;
+}
+
+#telechargements {
+    background-color: darkslategrey;
+    padding: 20px;
+}
+
+.leftbox {
+    color: white;
+}
+
+.rightbox {
+    color: white;
+    font-size: 20px;
+}
+
+.lien {
+    color: yellow;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+header {
+    display: flex;
+}
+
+    header a {
+        flex: 0 0 auto; /* Le logo Nautilus ne prendra que l'espace n�cessaire */
+    }
+
+    header img {
+        max-width: 100%; /* Les images prendront 100% de la largeur disponible */
+        height: auto; /* Assurez-vous que les images ne d�forment pas */
+    }
+
+        header img:last-child {
+            width: auto; /* R�initialise la largeur � auto pour que le fond d'�cran ait la m�me largeur que le logo */
+            max-width: 100%; /* S'assurer que la largeur n'exc�de pas la largeur du logo */
+            height: auto; /* Assurez-vous que les images ne d�forment pas */
+            overflow: hidden; /* Cacher toute partie de l'image qui d�passe de la zone de son conteneur */
+        }
